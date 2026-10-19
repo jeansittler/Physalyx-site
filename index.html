@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Physalyx est un logiciel libre de physique-chimie pour traiter des mesures, tracer des graphiques, modéliser et réaliser des acquisitions expérimentales.">
+  <meta name="theme-color" content="#082b4c">
+  <title>Physalyx — Logiciel libre de physique-chimie</title>
+  <link rel="icon" href="assets/brand/physalyx-icon.ico" sizes="any">
+  <link rel="icon" href="assets/brand/physalyx-icon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js?v=20261019-2" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#accueil" aria-label="Physalyx, accueil"><img src="assets/brand/physalyx-logo.png" width="2172" height="724" alt="Physalyx"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-principale"><span class="sr-only">Ouvrir le menu</span><span></span><span></span><span></span></button>
+      <nav id="navigation-principale" class="site-nav" aria-label="Navigation principale"><a href="#fonctionnalites">Fonctionnalités</a><a href="#exemples">Exemples de TP</a><a href="#telecharger">Téléchargement</a><a class="button button-small" href="https://github.com/jeansittler/Physalyx/releases/latest" target="_blank" rel="noopener noreferrer">Télécharger</a></nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section id="accueil" class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy"><p class="overline">Pour l’enseignement et les travaux pratiques</p><h1>Physalyx — Logiciel libre de physique-chimie</h1><p class="hero-lead">Physalyx permet de saisir et traiter des mesures, tracer des graphiques, ajuster des modèles, effectuer un pointage vidéo et exploiter des acquisitions Arduino. Il est destiné aux élèves, aux enseignants et aux étudiants.</p><div class="hero-actions"><a class="button" href="https://github.com/jeansittler/Physalyx/releases/latest" target="_blank" rel="noopener noreferrer">Télécharger pour Windows</a><a class="button button-secondary" href="#fonctionnalites">Découvrir les fonctionnalités</a></div><p class="hero-note">Gratuit · Logiciel libre sous licence GNU GPL-3.0</p></div>
+        <figure class="software-shot hero-shot"><button class="image-button" type="button" data-lightbox="assets/images/captures/accueil-fenetre.png" aria-label="Agrandir la capture de la page d’accueil de Physalyx"><img src="assets/images/captures/accueil-fenetre.png" width="1282" height="792" alt="Page d’accueil de Physalyx 1.9.0 présentant ses dix modules scientifiques"><span>Agrandir</span></button><figcaption>Page d’accueil de Physalyx 1.9.0.</figcaption></figure>
+      </div>
+    </section>
+    <section id="fonctionnalites" class="section modules-section">
+      <div class="wide-shell">
+        <div class="section-heading"><div><p class="overline">Fonctionnalités</p><h2>Dix modules pour les activités expérimentales</h2></div><p>Sélectionnez un module pour afficher sa capture et son usage principal.</p></div>
+        <div class="module-layout">
+          <ol class="module-list" data-module-list>
+            <li><button class="is-active" data-module="0" aria-pressed="true"><b>01</b><span>Données</span><small>Saisir, organiser, calculer et importer des mesures.</small></button></li>
+            <li><button data-module="1" aria-pressed="false"><b>02</b><span>Graphique</span><small>Tracer plusieurs séries et utiliser les outils d’analyse.</small></button></li>
+            <li><button data-module="2" aria-pressed="false"><b>03</b><span>Modélisation</span><small>Ajuster un modèle et examiner ses paramètres.</small></button></li>
+            <li><button data-module="3" aria-pressed="false"><b>04</b><span>Pointage vidéo</span><small>Relever la position d’un mobile image par image.</small></button></li>
+            <li><button data-module="4" aria-pressed="false"><b>05</b><span>Calculs</span><small>Calculer des dérivées et de nouvelles grandeurs.</small></button></li>
+            <li><button data-module="5" aria-pressed="false"><b>06</b><span>Statistiques</span><small>Étudier une série, sa dispersion et son incertitude-type.</small></button></li>
+            <li><button data-module="6" aria-pressed="false"><b>07</b><span>Numérisation de graphiques</span><small>Extraire les coordonnées d’une courbe depuis une image.</small></button></li>
+            <li><button data-module="7" aria-pressed="false"><b>08</b><span>Analyse d’images</span><small>Mesurer une distance ou analyser un profil d’intensité.</small></button></li>
+            <li><button data-module="8" aria-pressed="false"><b>09</b><span>Acquisition Arduino</span><small>Mesurer une tension et étudier des signaux en temps réel.</small></button></li>
+            <li><button data-module="9" aria-pressed="false"><b>10</b><span>Spectrophotométrie</span><small>Mesurer l’absorbance, étalonner et suivre une cinétique.</small></button></li>
+          </ol>
+          <article class="module-preview" aria-live="polite"><button class="image-button" type="button" data-module-image-button data-lightbox="assets/images/captures/donnees-full.png" aria-label="Agrandir la capture du module Données"><img src="assets/images/captures/donnees-full.png" width="2048" height="1152" alt="Module Données de Physalyx avec un tableau de mesures" data-module-image><span>Agrandir</span></button><div class="module-caption"><p class="module-number">Module 01</p><h3>Données</h3><p data-module-description>Saisir, organiser, calculer et importer des mesures expérimentales.</p><p class="rights-note" data-module-note hidden></p></div></article>
+        </div>
+      </div>
+    </section>
+    <section id="exemples" class="section examples-section">
+      <div class="shell"><div class="section-heading"><div><p class="overline">En travaux pratiques</p><h2>Quelques exemples d’utilisation</h2></div><p>Des activités de mécanique, de chimie et d’électricité réalisées avec les outils du logiciel.</p></div>
+        <div class="examples-grid">
+          <figure class="example-card"><button class="image-button" type="button" data-lightbox="assets/images/captures/titrage-ph-metrique.png" aria-label="Agrandir la capture du dosage pH-métrique"><img loading="lazy" src="assets/images/captures/titrage-ph-metrique.png" width="2048" height="1152" alt="Courbe de dosage pH-métrique et détermination du volume équivalent dans Physalyx"><span>Agrandir</span></button><figcaption><b>Dosage pH-métrique</b><span>Tracer la courbe et déterminer graphiquement l’équivalence.</span></figcaption></figure>
+          <figure class="example-card"><button class="image-button" type="button" data-lightbox="assets/images/captures/acquisition-carre.png" aria-label="Agrandir la capture de l’acquisition Arduino"><img loading="lazy" src="assets/images/captures/acquisition-carre.png" width="2048" height="1152" alt="Acquisition Arduino d’un signal carré et charge-décharge d’un circuit RC"><span>Agrandir</span></button><figcaption><b>Circuit RC avec Arduino</b><span>Acquérir et observer la charge et la décharge d’un condensateur.</span></figcaption></figure>
+          <figure class="example-card"><button class="image-button" type="button" data-lightbox="assets/images/captures/spectro-1-full.png" aria-label="Agrandir la capture de spectrophotométrie"><img loading="lazy" src="assets/images/captures/spectro-1-full.png" width="2048" height="1152" alt="Spectres d’absorbance mesurés avec le module Spectrophotométrie de Physalyx"><span>Agrandir</span></button><figcaption><b>Spectrophotométrie</b><span>Comparer des mesures d’absorbance sur huit bandes spectrales.</span></figcaption></figure>
+          <figure class="example-card"><button class="image-button" type="button" data-lightbox="assets/images/captures/graphique-full.png" aria-label="Agrandir la capture de l’étude d’un mouvement"><img loading="lazy" src="assets/images/captures/graphique-full.png" width="2048" height="1152" alt="Trajectoire parabolique et modélisation dans le module Graphique de Physalyx"><span>Agrandir</span></button><figcaption><b>Étude d’un mouvement</b><span>Représenter une trajectoire et la comparer à un modèle.</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+    <section id="telecharger" class="download-section"><div class="shell download-grid"><div><p class="overline light">Téléchargement</p><h2>Physalyx pour Windows</h2><p>L’installateur officiel est disponible sur GitHub. Il est signé numériquement et Physalyx peut ensuite proposer les nouvelles versions depuis l’application.</p></div><div class="download-details"><ul><li>Gratuit et sans compte</li><li>Logiciel libre GNU GPL-3.0-only</li><li>Installateur Windows signé Certum</li><li>Système de mise à jour intégré</li></ul><a class="button button-light" href="https://github.com/jeansittler/Physalyx/releases/latest" target="_blank" rel="noopener noreferrer">Télécharger la dernière version</a><p>Une ancienne installation Physalix est reconnue et les projets existants restent compatibles.</p></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-grid"><div><a class="brand footer-brand" href="#accueil"><img src="assets/brand/physalyx-logo.png" width="2172" height="724" alt="Physalyx"></a><p>Logiciel libre de physique-chimie.</p></div><div><p class="footer-label">Navigation</p><a href="#fonctionnalites">Fonctionnalités</a><a href="#exemples">Exemples de TP</a><a href="#telecharger">Téléchargement</a></div><div><p class="footer-label">Projet</p><a href="https://github.com/jeansittler/Physalyx" target="_blank" rel="noopener noreferrer">Code source GitHub</a><span>Jean Sittler</span><span>GNU GPL-3.0-only</span></div></div><div class="shell footer-bottom"><span>© 2026 Physalyx</span><span>Licence des contenus du site à définir.</span></div></footer>
+  <dialog class="lightbox" data-lightbox-dialog aria-label="Aperçu agrandi"><button type="button" class="lightbox-close" data-lightbox-close aria-label="Fermer l’aperçu">Fermer ×</button><img alt="Capture de Physalyx agrandie"><p></p></dialog>
+</body>
+</html>
