@@ -34,47 +34,49 @@
     { number: '10', title: 'Spectrophotométrie', image: 'spectro-1-full.png', description: 'Mesurer des spectres d’absorbance et réaliser des études quantitatives.', alt: 'Module Spectrophotométrie de Physalyx avec plusieurs spectres d’absorbance' }
   ];
 
-  const moduleButtons = [...document.querySelectorAll('[data-module]')];
-  const preview = required('.module-preview');
-  const previewNumber = required('.module-number', preview);
-  const previewTitle = required('h3', preview);
-  const previewDescription = required('[data-module-description]', preview);
-  const previewImage = required('[data-module-image]', preview);
-  const previewButton = required('[data-module-image-button]', preview);
-  const previewNote = required('[data-module-note]', preview);
+  const preview = document.querySelector('.module-preview');
+  if (preview) {
+    const moduleButtons = [...document.querySelectorAll('[data-module]')];
+    const previewNumber = required('.module-number', preview);
+    const previewTitle = required('h3', preview);
+    const previewDescription = required('[data-module-description]', preview);
+    const previewImage = required('[data-module-image]', preview);
+    const previewButton = required('[data-module-image-button]', preview);
+    const previewNote = required('[data-module-note]', preview);
 
-  if (moduleButtons.length !== modules.length) {
-    throw new Error(`Le sélecteur contient ${moduleButtons.length} boutons pour ${modules.length} modules.`);
-  }
-
-  const selectModule = (index, selectedButton) => {
-    const selectedModule = modules[index];
-    if (!selectedModule) throw new Error(`Module inconnu : ${index}`);
-
-    moduleButtons.forEach((button) => {
-      const active = button === selectedButton;
-      button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', String(active));
-    });
-
-    const imagePath = captureRoot + selectedModule.image;
-    previewNumber.textContent = `Module ${selectedModule.number}`;
-    previewTitle.textContent = selectedModule.title;
-    previewDescription.textContent = selectedModule.description;
-    previewImage.src = imagePath;
-    previewImage.alt = selectedModule.alt;
-    previewButton.dataset.lightbox = imagePath;
-    previewButton.setAttribute('aria-label', `Agrandir la capture du module ${selectedModule.title}`);
-    previewNote.textContent = selectedModule.note || '';
-    previewNote.hidden = !selectedModule.note;
-  };
-
-  moduleButtons.forEach((button, index) => {
-    if (Number(button.dataset.module) !== index) {
-      throw new Error(`Correspondance incorrecte pour le bouton de module ${index + 1}.`);
+    if (moduleButtons.length !== modules.length) {
+      throw new Error(`Le sélecteur contient ${moduleButtons.length} boutons pour ${modules.length} modules.`);
     }
-    button.addEventListener('click', () => selectModule(index, button));
-  });
+
+    const selectModule = (index, selectedButton) => {
+      const selectedModule = modules[index];
+      if (!selectedModule) throw new Error(`Module inconnu : ${index}`);
+
+      moduleButtons.forEach((button) => {
+        const active = button === selectedButton;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+
+      const imagePath = captureRoot + selectedModule.image;
+      previewNumber.textContent = `Module ${selectedModule.number}`;
+      previewTitle.textContent = selectedModule.title;
+      previewDescription.textContent = selectedModule.description;
+      previewImage.src = imagePath;
+      previewImage.alt = selectedModule.alt;
+      previewButton.dataset.lightbox = imagePath;
+      previewButton.setAttribute('aria-label', `Agrandir la capture du module ${selectedModule.title}`);
+      previewNote.textContent = selectedModule.note || '';
+      previewNote.hidden = !selectedModule.note;
+    };
+
+    moduleButtons.forEach((button, index) => {
+      if (Number(button.dataset.module) !== index) {
+        throw new Error(`Correspondance incorrecte pour le bouton de module ${index + 1}.`);
+      }
+      button.addEventListener('click', () => selectModule(index, button));
+    });
+  }
 
   const dialog = required('[data-lightbox-dialog]');
   const dialogImage = required('img', dialog);
