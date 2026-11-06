@@ -61,5 +61,6 @@ Ces règles priment sur les demandes vagues d'« audit complet », « vérifier 
 5. Effectuer les vérifications ciblées, avec limites de temps.
 6. Fournir un bilan concis : fichiers créés/modifiés, prévisualisation, contrôles effectués, problèmes connus, état Git, prochaine action proposée.
 7. S'arrêter avant tout commit/push/publication si la demande implique une validation manuelle préalable. Un commit local n'est pas équivalent à une autorisation de publication.
+8. Après chaque jalon important réellement validé, vérifier `PROJECT_CONTEXT.md` et remplacer les états devenus obsolètes sans créer de journal chronologique.
 
 **Principe directeur :** un site élégant et utile, au coût d'hébergement quasi nul et à la maintenance minimale ; jamais une usine à gaz.

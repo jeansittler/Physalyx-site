@@ -6,7 +6,7 @@
 >
 > Avant toute intervention, lire `AGENTS.md` et ce fichier. Les instructions de budget de `AGENTS.md` sont prioritaires. Garder ce contexte **compact et à jour** : remplacer les états obsolètes, ne pas empiler un journal exhaustif.
 
-**État de référence : 19 octobre 2026.** Les faits ponctuels (version, disponibilité, état Git, configuration DNS) doivent être revalidés avant publication ; ce document ne les rend pas automatiquement actuels.
+**État de référence : 6 novembre 2026.** Le site est publié et les faits ponctuels (version, disponibilité, état Git, déploiement et DNS) doivent être revalidés avant toute intervention qui en dépend.
 
 ---
 
@@ -18,9 +18,11 @@
 - **Finalité :** vitrine et documentation d'un logiciel **libre et gratuit** pour l'enseignement de la physique-chimie, avec accès clair aux téléchargements officiels.
 - **Publics prioritaires :** élèves de collège/lycée, professeurs de physique-chimie, établissements scolaires ; contenus accessibles aussi au grand public.
 - **Langue initiale :** français. Pas de multilingue avant décision explicite.
-- **Répertoire de travail :** `C:\Physalyx-site`, dépôt Git local sur `main`, sans publication.
-- **Dépôt GitHub du site envisagé :** `jeansittler/physalyx-site` (**non créé / non publié à ce stade**).
-- **Hébergement visé :** **GitHub Pages gratuit**, lié au domaine OVH ; configuration et publication **non réalisées à ce stade**.
+- **Site officiel :** `https://physalyx.fr/`.
+- **Documentation du spectrophotomètre :** `https://physalyx.fr/spectrophotometre.html`.
+- **Répertoire de travail :** `C:\Physalyx-site`, dépôt Git local sur `main`.
+- **Dépôt GitHub public :** `jeansittler/Physalyx-site`, `https://github.com/jeansittler/Physalyx-site`.
+- **Hébergement :** GitHub Pages gratuit, publié depuis la branche `main` et le dossier `/(root)`.
 - Les autres sites et hébergements OVH de l'utilisateur restent **indépendants** ; ne rien modifier sur ces services.
 
 ### Distinction essentielle des noms
@@ -42,7 +44,7 @@
 - **Sources graphiques de référence :** `C:\Physalix\physalix\ui\resources\branding\` pour le logo et les icônes officiels ; `home_page.py`, `main_window.py` et `theme.py` pour les conventions d'interface.
 - Ne lire que les sections pertinentes de ces fichiers. Ne jamais explorer tout le dépôt ni lancer sa suite de tests pour un changement du site.
 
-**Version stable confirmée au 19/10/2026 : Physalyx 1.9.0**, release `v1.9.0`, avec installateur Windows signé Certum et système de mise à jour intégré. Éviter de figer ce numéro dans les boutons permanents du site.
+**Version stable confirmée au 06/11/2026 : Physalyx 1.9.0**, release `v1.9.0`, avec installateur Windows signé Certum et système de mise à jour intégré. Éviter de figer ce numéro dans les boutons permanents du site.
 
 **Téléchargement officiel permanent :**
 
@@ -79,6 +81,14 @@ Le logiciel possède une **page d'accueil scientifique** avec une galerie visuel
 ## 3. Objectifs du site
 
 Le site doit permettre à un élève de télécharger le logiciel en quelques clics, et à un enseignant de comprendre son intérêt pédagogique, de découvrir ses modules puis de suivre un tutoriel de TP.
+
+### Contenu effectivement publié
+
+- Page d'accueil présentant les dix modules avec des captures authentiques et des exemples pédagogiques.
+- Téléchargement permanent du logiciel par `https://github.com/jeansittler/Physalyx/releases/latest`.
+- Page de construction du spectrophotomètre : matériel, branchements, assemblage, photographies et trois fichiers d'impression 3D.
+- Installation du micrologiciel du Nano directement depuis Physalyx, sans Arduino IDE ni fichier HEX séparé.
+- Réglages expérimentaux de référence et huit bandes spectrales documentés.
 
 **Positionnement :** sérieux, scientifique, contemporain, accessible, sans effets marketing tapageurs. Signature proposée : **« Expérimentez. Analysez. Comprenez. »** (à valider visuellement, pas une obligation d'usage sur toutes les pages).
 
@@ -122,27 +132,26 @@ Ces rubriques constituent l'objectif fonctionnel ; leur découpage en pages dist
 
 ---
 
-## 6. Publication et infrastructure — interdictions par défaut
+## 6. Publication et infrastructure
 
-Le domaine `physalyx.fr` est **enregistré**, mais le site et son rattachement DNS/HTTPS ne sont **pas encore configurés**. Ne jamais annoncer « le site est en ligne » sans constat réel.
+- **Dépôt public :** `jeansittler/Physalyx-site`.
+- **GitHub Pages :** source `main`, dossier `/(root)`, dernier déploiement contrôlé à l'état `built`.
+- **Domaine personnalisé :** `physalyx.fr`, déclaré par le fichier racine `CNAME`.
+- **DNS OVHcloud :** quatre enregistrements A officiels GitHub Pages ; `www` en CNAME vers `jeansittler.github.io`.
+- **Sécurité et routage :** vérification DNS GitHub réussie, certificat TLS actif, Enforce HTTPS activé, HTTP redirigé vers HTTPS et `www.physalyx.fr` redirigé vers `physalyx.fr`.
+- **Validations du 6 novembre 2026 :** accueil, documentation, CSS, JavaScript, images, deux fichiers 3MF et archive ZIP en HTTP 200 ; redirections HTTP/HTTPS et `www` vérifiées.
 
-**Ordre prévu :**
-
-1. Développement local dans `C:\Physalyx-site`.
-2. Relecture pédagogique, contrôle du rendu desktop/mobile, captures authentiques et liens.
-3. Validation explicite de l'utilisateur.
-4. Création/publication du dépôt du site et configuration GitHub Pages, uniquement après autorisation.
-5. Raccordement des DNS OVH (`physalyx.fr` et si souhaité `www.physalyx.fr`) et activation HTTPS **après préparation de Pages**, avec instructions vérifiées et approbation.
-6. Vérification publique sur les deux noms de domaine, des redirections, du certificat HTTPS et du bouton Télécharger.
-
-**Sans accord explicite :** ne pas modifier les DNS OVH, les contacts ou l'abonnement, créer un dépôt distant public, activer un déploiement, effectuer `git push`, acheter un service ni changer le domaine principal.
+Ces faits décrivent l'état validé, pas une autorisation permanente de mutation. **Sans accord explicite :** ne pas modifier les DNS OVH, les contacts ou l'abonnement, la configuration GitHub Pages, le domaine personnalisé, le remote, ni effectuer de commit, push ou nouveau déploiement.
 
 ---
 
 ## 7. Méthode Git et sessions Codex
 
 - **Projet Codex :** `C:\Physalyx-site`.
-- **Branche initiale prévue :** `main`, après initialisation éventuelle du Git local ; vérifier son état réel avant commande.
+- **Branche de référence :** `main`, suivie par `origin/main`.
+- **Remote officiel :** `origin` → `https://github.com/jeansittler/Physalyx-site.git`.
+- **Commit synchronisé de référence au 06/11/2026 :** `a737151d85d53ba856d5c4d0acee92a6412d4b7e` (`CNAME` compris).
+- **État local particulier :** `assets/images/spectrophotometre/05-boitier-ferme.jpg` reste volontairement non suivi ; ne pas le supprimer ni le publier sans décision explicite.
 - Dépôt de l'application `C:\Physalix` : **aucune modification, aucun commit, aucune branche, aucune commande de test** depuis le projet du site.
 - Préférer des tâches courtes et ciblées : identité visuelle, page d'accueil, autres pages, documentation, finitions, puis publication.
 - Avant chaque prompt, préciser : **nouvelle conversation ou conversation existante**, dossier, branche, modèle/effort, périmètre, opérations Git autorisées et validations attendues.
@@ -161,22 +170,21 @@ La politique complète est dans `AGENTS.md` et prime sur toute consigne plus anc
 
 ---
 
-## 8. État d'avancement et prochaine étape
+## 8. État d'avancement et prochaines étapes
 
-**Confirmé au 19 octobre 2026 :**
+**État confirmé au 6 novembre 2026 :**
 
-- Choix du nom **Physalyx**.
-- Domaine `physalyx.fr` acheté et activé chez OVH jusqu'au 18/10/2029.
-- Titulaire personnel corrigé ; confirmation OVH reçue.
-- Choix d'orientation : site statique public **hébergé gratuitement via GitHub Pages**, avec téléchargements servis par les **GitHub Releases** du logiciel.
-- **Physalyx 1.9.0** publié et validé ; dépôt officiel `jeansittler/Physalyx`, migration depuis Physalix 1.8.0 et conservation des projets confirmées.
-- Première page d'accueil locale créée en HTML, CSS et JavaScript natifs, puis validée visuellement et fonctionnellement dans Chrome. Identité officielle et captures authentiques des dix modules intégrées ; archives et variantes non utilisées exclues de Git.
+- Site statique public en HTML, CSS et JavaScript natifs, validé dans Chrome puis publié sur GitHub Pages.
+- Domaine `physalyx.fr` opérationnel en HTTPS ; variante `www` redirigée vers l'apex.
+- Dépôt local et dépôt public synchronisés au commit de référence indiqué en section 7.
+- Page d'accueil et documentation du spectrophotomètre accessibles publiquement avec leurs ressources.
+- **Physalyx 1.9.0** reste la release stable confirmée du logiciel ; migration depuis Physalix 1.8.0 et conservation des projets validées.
 
-**À faire, sans présumer de leur réalisation :**
+**Prochaines étapes possibles, uniquement sur demande :**
 
-1. Créer le premier point de référence Git local de la page d'accueil validée.
-2. Préparer ensuite le dépôt public et GitHub Pages, uniquement avec une autorisation séparée.
-3. Configurer ultérieurement le domaine et les DNS OVH, avec validation explicite.
+1. Maintenance éditoriale et ajout progressif de tutoriels vérifiés.
+2. Décision explicite sur la licence des contenus propres au site.
+3. Contrôles ponctuels après chaque évolution publiée : pages, ressources, téléchargements, HTTPS et synchronisation Git.
 
 ---
 
@@ -184,8 +192,8 @@ La politique complète est dans `AGENTS.md` et prime sur toute consigne plus anc
 
 Message de référence :
 
-> On continue le projet du **site officiel Physalyx**. Je joins `PROJECT_CONTEXT.md` ; lis-le et respecte en priorité `AGENTS.md` pour Codex. Le site est séparé du logiciel `C:\Physalix` (lecture seule). Indique les hypothèses non vérifiées avant d'intervenir. Travaille uniquement dans `C:\Physalyx-site` et ne publie, ne pousse et ne modifie pas les DNS sans mon accord explicite.
+> On continue le projet du **site officiel Physalyx**, publié sur `https://physalyx.fr/`. Lis `PROJECT_CONTEXT.md` et respecte en priorité `AGENTS.md`. Le site est séparé du logiciel `C:\Physalix` (lecture seule). Travaille uniquement dans `C:\Physalyx-site` et ne modifie pas GitHub Pages, le remote, le domaine ou les DNS, et n'effectue aucun commit, push ou déploiement sans mon accord explicite.
 
 ### Maintenance du contexte
 
-Après un jalon **réellement validé**, mettre à jour ici uniquement les faits durables : architecture choisie, URL/depot réel, état de publication, décisions UX, contenus vérifiés et prochaines étapes. Ne jamais transformer des souhaits ou un plan en travaux déjà réalisés.
+Après chaque jalon important **réellement validé**, vérifier ce document et remplacer les états devenus obsolètes. Conserver uniquement les faits durables : architecture, URL et dépôt réels, état de publication, décisions UX, contenus vérifiés et prochaines étapes. Ne jamais empiler un journal ni transformer un souhait en travail réalisé.
