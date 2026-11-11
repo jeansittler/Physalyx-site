@@ -20,18 +20,17 @@
   }));
 
   const captureRoot = 'assets/images/captures/';
-  const imageWarning = 'Vérifier les droits du visuel expérimental avant publication.';
   const modules = [
-    { number: '01', title: 'Données', image: 'donnees-full.png', description: 'Saisir, organiser, calculer et importer des mesures expérimentales.', alt: 'Module Données de Physalyx avec un tableau de mesures' },
-    { number: '02', title: 'Graphique', image: 'graphique-full.png', description: 'Tracer plusieurs séries, choisir les axes et utiliser les outils d’analyse.', alt: 'Module Graphique de Physalyx avec une trajectoire parabolique' },
-    { number: '03', title: 'Modélisation', image: 'modelisation-full.png', description: 'Ajuster un modèle mathématique et examiner ses paramètres et indicateurs.', alt: 'Module Modélisation de Physalyx avec un ajustement polynomial' },
-    { number: '04', title: 'Pointage vidéo', image: 'pointage-fenetre.png', description: 'Étalonner une vidéo puis relever la position d’un mobile image par image.', alt: 'Module Pointage vidéo de Physalyx montrant le suivi d’une roue de vélo' },
-    { number: '05', title: 'Calculs', image: 'calcul-fenetre.png', description: 'Calculer des dérivées numériques et créer de nouvelles grandeurs par formule.', alt: 'Module Calculs de Physalyx avec des grandeurs calculées' },
+    { number: '01', title: 'Données', image: 'donnees-full.png', description: 'Saisir, organiser et vérifier des mesures, puis utiliser des formules directement dans le tableur scientifique.', alt: 'Module Données de Physalyx avec un tableau de mesures' },
+    { number: '02', title: 'Graphique', image: 'graphique-full.png', description: 'Tracer plusieurs séries, choisir les axes gauche ou droit, puis examiner les courbes avec le réticule.', alt: 'Module Graphique de Physalyx avec une trajectoire parabolique' },
+    { number: '03', title: 'Modélisation', image: 'modelisation-full.png', description: 'Ajuster des modèles usuels ou personnalisés et conserver les résultats propres à chaque série.', alt: 'Module Modélisation de Physalyx avec un ajustement polynomial' },
+    { number: '04', title: 'Pointage vidéo', image: 'pointage-fenetre.png', description: 'Étalonner la vidéo, définir le repère et relever la trajectoire d’un mobile image par image.', alt: 'Module Pointage vidéo de Physalyx montrant le suivi d’une roue de vélo' },
+    { number: '05', title: 'Calculs', image: 'calcul-fenetre.png', description: 'Créer des grandeurs par formule, calculer des dérivées et mettre à jour leurs dépendances.', alt: 'Module Calculs de Physalyx avec des grandeurs calculées' },
     { number: '06', title: 'Statistiques', image: 'stat-fenetre.png', description: 'Calculer les indicateurs d’une série, sa dispersion et son incertitude-type.', alt: 'Fenêtre Statistiques de Physalyx présentant les indicateurs d’une série' },
-    { number: '07', title: 'Numérisation de graphiques', image: 'numerisation-full.png', description: 'Étalonner une image de graphique et en extraire les coordonnées des points.', alt: 'Module Numérisation de Physalyx utilisé sur une courbe conductimétrique' },
-    { number: '08', title: 'Analyse d’images', image: 'analyse-image-1-full.png', description: 'Étalonner une image, mesurer des distances et exploiter un profil d’intensité.', alt: 'Module Analyse d’images de Physalyx avec des franges et un profil d’intensité', note: imageWarning },
-    { number: '09', title: 'Acquisition Arduino', image: 'acquisition-carre.png', description: 'Mesurer une tension, générer un signal et transférer les résultats.', alt: 'Module Acquisition Arduino de Physalyx étudiant un circuit RC' },
-    { number: '10', title: 'Spectrophotométrie', image: 'spectro-1-full.png', description: 'Mesurer des spectres d’absorbance et réaliser des études quantitatives.', alt: 'Module Spectrophotométrie de Physalyx avec plusieurs spectres d’absorbance' }
+    { number: '07', title: 'Numérisation de graphiques', image: 'numerisation-full.png', description: 'Étalonner les axes d’une image, détecter les points d’une courbe et corriger leur position.', alt: 'Module Numérisation de Physalyx utilisé sur une courbe conductimétrique' },
+    { number: '08', title: 'Analyse d’images', image: 'analyse-image-1-full.png', description: 'Étalonner une photographie en distance ou en longueur d’onde, puis comparer des profils d’intensité.', alt: 'Module Analyse d’images de Physalyx avec des franges et un profil d’intensité' },
+    { number: '09', title: 'Acquisition Arduino', image: 'acquisition-carre.png', description: 'Mesurer des tensions avec une Arduino Uno, générer un signal et transférer les mesures.', alt: 'Module Acquisition Arduino de Physalyx étudiant un circuit RC' },
+    { number: '10', title: 'Spectrophotométrie', image: 'spectro-1-full.png', description: 'Mesurer l’absorbance sur huit bandes, étudier Beer-Lambert ou suivre une cinétique.', alt: 'Module Spectrophotométrie de Physalyx avec plusieurs spectres d’absorbance' }
   ];
 
   const preview = document.querySelector('.module-preview');
