@@ -12,7 +12,7 @@
     try {
       if (!navigator.clipboard?.writeText) throw new Error('API Clipboard indisponible');
       await navigator.clipboard.writeText(emailLink.textContent.trim());
-      status.textContent = 'Adresse copiée !';
+      status.textContent = 'Adresse copiée';
     } catch {
       status.textContent = 'Copie automatique impossible. Sélectionnez l’adresse ci-dessus pour la copier manuellement.';
       status.classList.add('is-error');
