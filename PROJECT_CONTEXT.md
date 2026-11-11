@@ -87,7 +87,7 @@ Le site doit permettre à un élève de télécharger le logiciel en quelques cl
 - Page d'accueil présentant les dix modules avec des captures authentiques et des exemples pédagogiques.
 - Encart dédié sur l’accueil donnant un accès direct au guide de fabrication du spectrophotomètre.
 - Téléchargement permanent du logiciel par `https://github.com/jeansittler/Physalyx/releases/latest`.
-- Contact officiel par lien `mailto:` vers `jean.sittler@gmail.com`, avec l’objet prérempli « Physalyx - Contact et suggestions ».
+- Page `contact.html` affichant l’adresse officielle `jean.sittler@gmail.com`, avec copie dans le presse-papiers, rédaction Gmail Web et lien `mailto:` secondaire.
 - Page de construction du spectrophotomètre : matériel, branchements, assemblage, photographies et trois fichiers d'impression 3D.
 - Nomenclature électronique complète assortie de références GoTronic vérifiées, dont la résistance axiale 220 Ω, ¼ W, 5 %, code 04028.
 - Attribution explicite au projet pédagogique Mini-Spectro du lycée Valin de La Rochelle, développé par Stéphane Laurent et Sylvie Bernard-Villain, sans suggérer leur implication dans Physalyx.
