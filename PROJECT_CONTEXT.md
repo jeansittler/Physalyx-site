@@ -6,7 +6,7 @@
 >
 > Avant toute intervention, lire `AGENTS.md` et ce fichier. Les instructions de budget de `AGENTS.md` sont prioritaires. Garder ce contexte **compact et à jour** : remplacer les états obsolètes, ne pas empiler un journal exhaustif.
 
-**État de référence : 11 novembre 2026.** Le site est publié et les faits ponctuels (version, disponibilité, état Git, déploiement et DNS) doivent être revalidés avant toute intervention qui en dépend.
+**État de référence : 17 novembre 2026, après publication de la notice définitive du spectrophotomètre V2.3.** Le site est publié et les faits ponctuels (version, disponibilité, état Git, déploiement et DNS) doivent être revalidés avant toute intervention qui en dépend.
 
 ---
 
@@ -20,6 +20,8 @@
 - **Langue initiale :** français. Pas de multilingue avant décision explicite.
 - **Site officiel :** `https://physalyx.fr/`.
 - **Documentation du spectrophotomètre :** `https://physalyx.fr/spectrophotometre.html`.
+- **Contact et suggestions :** `https://physalyx.fr/contact.html`.
+- **Licences et crédits :** `https://physalyx.fr/licences.html`.
 - **Répertoire de travail :** `C:\Physalyx-site`, dépôt Git local sur `main`.
 - **Dépôt GitHub public :** `jeansittler/Physalyx-site`, `https://github.com/jeansittler/Physalyx-site`.
 - **Hébergement :** GitHub Pages gratuit, publié depuis la branche `main` et le dossier `/(root)`.
@@ -30,7 +32,7 @@
 - **Physalyx** : nom officiel du site, de l'application Windows, de l'installateur et du dépôt public depuis la version 1.9.0.
 - **Physalix** : ancien nom public. Il ne subsiste que dans certains identifiants internes et dans l'extension historique `.physalix` afin de préserver la compatibilité.
 - La migration réelle depuis Physalix 1.8.0 vers Physalyx 1.9.0 a été validée ; les projets existants sont conservés.
-- Le logiciel porte actuellement la licence **GNU GPL-3.0-only**. Jean Sittler conserve tous ses droits sur les textes et photographies originaux du site, sauf mention contraire. Cette politique ne revendique aucun droit exclusif sur les ressources tierces ; la provenance, la licence et l’autorisation de redistribution des fichiers 3D restent à confirmer.
+- Le logiciel distribué actuellement porte la licence **GNU GPL-3.0-only**. L’étude d’une licence propriétaire pour de futures versions est un chantier séparé, sans effet sur la licence publique actuelle. Jean Sittler conserve tous ses droits sur les textes et photographies originaux du site, sauf mention contraire. Cette politique ne revendique aucun droit exclusif sur les ressources tierces ; la provenance, la licence et l’autorisation de redistribution des fichiers 3D restent à confirmer.
 - La réservation du domaine et le caractère éducatif du logiciel ne constituent pas une validation juridique du nom. Ne pas affirmer que l'absence de conflit a été garantie.
 
 ---
@@ -87,8 +89,8 @@ Le site doit permettre à un élève de télécharger le logiciel en quelques cl
 - Page d'accueil présentant les dix modules avec des captures authentiques et des exemples pédagogiques.
 - Encart dédié sur l’accueil donnant un accès direct au guide de fabrication du spectrophotomètre.
 - Téléchargement permanent du logiciel par `https://github.com/jeansittler/Physalyx/releases/latest`.
-- Page `contact.html` affichant l’adresse officielle `jean.sittler@gmail.com` et permettant de la copier dans le presse-papiers afin d’utiliser la messagerie de son choix.
-- Page de construction du spectrophotomètre : matériel, branchements, assemblage, photographies et trois fichiers d'impression 3D.
+- Page `contact.html` : titre « Une question ou une suggestion ? », adresse officielle **`jean.sittler@gmail.com`** affichée en clair, sélectionnable et copiable par le seul bouton « Copier l’adresse e-mail » ; confirmation « Adresse copiée » uniquement après succès, retour accessible avec `aria-live` et gestion d’échec. Aucun bouton Gmail, lien `mailto:`, formulaire ou service externe. Les liens « Contact » des autres pages mènent vers `contact.html`.
+- Notice de construction du spectrophotomètre Physalyx Spectro V2.3 : nomenclature complète, schémas de câblage, polarité et faisceau LED démontable, branchements, assemblage, vérifications avant alimentation, photographies authentiques et trois fichiers d'impression 3D.
 - Nomenclature électronique complète assortie de références GoTronic vérifiées, dont la résistance axiale 220 Ω, ¼ W, 5 %, code 04028.
 - Attribution explicite au projet pédagogique Mini-Spectro du lycée Valin de La Rochelle, développé par Stéphane Laurent et Sylvie Bernard-Villain, sans suggérer leur implication dans Physalyx.
 - Page « Licences et crédits » distinguant les contenus originaux tous droits réservés, le logiciel sous GNU GPL-3.0-only, les ressources tierces et le statut encore à confirmer des fichiers 3D.
@@ -140,11 +142,11 @@ Ces rubriques constituent l'objectif fonctionnel ; leur découpage en pages dist
 ## 6. Publication et infrastructure
 
 - **Dépôt public :** `jeansittler/Physalyx-site`.
-- **GitHub Pages :** source `main`, dossier `/(root)`, dernier déploiement contrôlé à l'état `built`.
+- **GitHub Pages :** source `main`, dossier `/(root)` ; dernière publication vérifiée le 17 novembre 2026 après mise à jour de la notice du spectrophotomètre.
 - **Domaine personnalisé :** `physalyx.fr`, déclaré par le fichier racine `CNAME`.
 - **DNS OVHcloud :** quatre enregistrements A officiels GitHub Pages ; `www` en CNAME vers `jeansittler.github.io`.
 - **Sécurité et routage :** vérification DNS GitHub réussie, certificat TLS actif, Enforce HTTPS activé, HTTP redirigé vers HTTPS et `www.physalyx.fr` redirigé vers `physalyx.fr`.
-- **Validations du 6 novembre 2026 :** accueil, documentation, CSS, JavaScript, images, deux fichiers 3MF et archive ZIP en HTTP 200 ; redirections HTTP/HTTPS et `www` vérifiées.
+- **Validations de publication au 17 novembre 2026 :** accueil, notice du spectrophotomètre, page Licences et page Contact accessibles en HTTP 200 ; liens et ressources du site contrôlés. La notice V2.3 définitive a été vérifiée en local sur ordinateur et smartphone, puis contrôlée publiquement avec ses dix sections, ses photographies, ses liens matériels et ses téléchargements 3D.
 
 Ces faits décrivent l'état validé, pas une autorisation permanente de mutation. **Sans accord explicite :** ne pas modifier les DNS OVH, les contacts ou l'abonnement, la configuration GitHub Pages, le domaine personnalisé, le remote, ni effectuer de commit, push ou nouveau déploiement.
 
@@ -155,7 +157,7 @@ Ces faits décrivent l'état validé, pas une autorisation permanente de mutatio
 - **Projet Codex :** `C:\Physalyx-site`.
 - **Branche de référence :** `main`, suivie par `origin/main`.
 - **Remote officiel :** `origin` → `https://github.com/jeansittler/Physalyx-site.git`.
-- **Commit synchronisé de référence au 06/11/2026 :** `a737151d85d53ba856d5c4d0acee92a6412d4b7e` (`CNAME` compris).
+- **Dernier commit publié et synchronisé au 17/11/2026 :** `docs: improve spectrophotometer assembly guide` ; la notice V2.3 définitive et ses styles sont publiés sur `main`.
 - **État local particulier :** `assets/images/spectrophotometre/05-boitier-ferme.jpg` reste volontairement non suivi ; ne pas le supprimer ni le publier sans décision explicite.
 - Dépôt de l'application `C:\Physalix` : **aucune modification, aucun commit, aucune branche, aucune commande de test** depuis le projet du site.
 - Préférer des tâches courtes et ciblées : identité visuelle, page d'accueil, autres pages, documentation, finitions, puis publication.
@@ -177,12 +179,13 @@ La politique complète est dans `AGENTS.md` et prime sur toute consigne plus anc
 
 ## 8. État d'avancement et prochaines étapes
 
-**État confirmé au 11 novembre 2026 :**
+**État confirmé au 17 novembre 2026 :**
 
-- Site statique public en HTML, CSS et JavaScript natifs, validé dans Chrome puis publié sur GitHub Pages.
+- Site statique public en HTML, CSS et JavaScript natifs, validé visuellement en local pour les pages concernées, puis publié sur GitHub Pages.
 - Domaine `physalyx.fr` opérationnel en HTTPS ; variante `www` redirigée vers l'apex.
 - Dépôt local et dépôt public synchronisés au commit de référence indiqué en section 7.
-- Page d'accueil et documentation du spectrophotomètre accessibles publiquement avec leurs ressources.
+- Pages Accueil, Spectrophotomètre, Licences et crédits, Contact et suggestions publiées ; la notice V2.3 présente les dix étapes de construction, le câblage, les contrôles et l’utilisation avec Physalyx.
+- Page Contact finale : adresse visible et bouton de copie uniquement ; aucun formulaire, backend OVH, intégration Google ou client de messagerie imposé.
 - **Physalyx 1.10.1** est la release stable et Latest confirmée ; l’installation réelle, la mise à jour et la compatibilité des projets historiques ont été validées.
 
 **Prochaines étapes possibles, uniquement sur demande :**
